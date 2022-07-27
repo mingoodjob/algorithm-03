@@ -1,10 +1,11 @@
-n = 0
-a = 'happy'
-b = 'new'
-c = 'year'
+cnt = 3
 
-for i in range(len(a)):
-    if i >= len(a):
-        break
-    if a[i] == b[i+1]:
-        print(a[i])
+for i in range(cnt):
+    word = input()
+    for x in range(len(word)-1):
+        if word[x] != word[x+1]:
+            if word[x+1] in word[:x]: 
+                cnt -= 1
+                break
+            
+print(cnt)
